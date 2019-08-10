@@ -34,7 +34,7 @@ getLength(items, item => console.log(item));
 
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
-  return cb(arr.pop());
+  return cb(arr[arr.length - 1]);
 }
 
 last(items, item => console.log(item));
@@ -84,7 +84,7 @@ console.log("Original array", test_array); // original array not mutated
 //   // removeDuplicates removes all duplicate values from the given array.
 //   // Pass the duplicate free array to the callback function.
 //   // Do not mutate the original array.
-//   const unique_arr = array.reduce((unique, item) => unique.includes(item) ? unique : [...unique, item], [])
+//   const unique_arr = array.reduce((unique, item) => unique.includes(item) ? unique : [...unique, item], []) // initial value of accumulator is empty array
 
 //   return cb(unique_arr);
 // }
